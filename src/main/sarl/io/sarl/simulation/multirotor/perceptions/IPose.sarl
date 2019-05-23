@@ -1,0 +1,17 @@
+/** 
+ * 
+ */
+package io.sarl.simulation.multirotor.perceptions
+
+import io.sarl.math.Vector3
+import io.sarl.math.Quaternion
+
+/** 
+ * @author Alexandre Lombard
+ * 
+ */
+interface IPose {
+	def getPosition : Vector3
+	
+	def getOrientation : Quaternion
+}

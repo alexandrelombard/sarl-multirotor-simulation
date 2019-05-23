@@ -1,0 +1,11 @@
+/** 
+ * 
+ */
+package io.sarl.simulation.multirotor.perceptions
+
+/** 
+ * @author Alexandre Lombard
+ * 
+ */
+interface IMultirotorState {
+}

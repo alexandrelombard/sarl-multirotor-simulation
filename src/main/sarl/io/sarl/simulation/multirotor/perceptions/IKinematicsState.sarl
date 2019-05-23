@@ -1,0 +1,15 @@
+/** 
+ * 
+ */
+package io.sarl.simulation.multirotor.perceptions
+
+import io.sarl.math.Vector3
+
+/** 
+ * @author Alexandre Lombard
+ * 
+ */
+interface IKinematicsState {
+	def getLinearVelocity : Vector3
+	def getLinearAcceleration : Vector3
+}

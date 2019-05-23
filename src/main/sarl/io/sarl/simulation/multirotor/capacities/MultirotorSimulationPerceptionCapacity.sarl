@@ -1,0 +1,37 @@
+/** 
+ * 
+ */
+package io.sarl.simulation.multirotor.capacities
+
+import io.sarl.simulation.multirotor.perceptions.IPose
+import io.sarl.simulation.multirotor.perceptions.IKinematicsState
+import io.sarl.simulation.multirotor.perceptions.IMultirotorState
+
+/** 
+ * The capacity to perceive the simulation state
+ * @author Alexandre Lombard
+ * 
+ */
+capacity MultirotorSimulationPerceptionCapacity {
+		/** 
+		 * Gets the position of the given object
+		 * @param objectName the name of the object
+		 * @return the object's pose
+		 */
+	def getObjectPose(objectName : String) : IPose
+
+	/** 
+	 * Gets the ground truth kinematics state for the given vehicle
+	 * @param vehicleName the name of the vehicle
+	 * @return the kinematics state
+	 */
+	def getGroundTruthKinematics(vehicleName : String) : IKinematicsState
+
+	/** 
+	 * Gets the multirotor state for the given vehicle
+	 * @param vehicleName the name of the vehicle
+	 * @return the multirotor state
+	 */
+	def getMultirotorState(vehicleName : String) : IMultirotorState
+}
+

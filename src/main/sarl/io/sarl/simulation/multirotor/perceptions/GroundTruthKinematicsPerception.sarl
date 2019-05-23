@@ -1,0 +1,17 @@
+/** 
+ * 
+ */
+package io.sarl.simulation.multirotor.perceptions
+
+/** 
+ * Kinematics perception
+ * @author Alexandre Lombard
+ * 
+ */
+event GroundTruthKinematicsPerception {
+	val state: IKinematicsState
+	
+	new(state : IKinematicsState) {
+		this.state = state
+	}
+}

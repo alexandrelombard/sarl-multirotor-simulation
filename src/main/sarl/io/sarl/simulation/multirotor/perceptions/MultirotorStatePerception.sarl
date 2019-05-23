@@ -1,0 +1,13 @@
+package io.sarl.simulation.multirotor.perceptions
+
+/**
+ * Represents the perception of the self state of a multirotor
+ * @author Alexandre Lombard
+ */
+event MultirotorStatePerception {
+	val multirotorState: IMultirotorState
+	
+	new(multirotorState: IMultirotorState) {
+		this.multirotorState = multirotorState
+	}
+}

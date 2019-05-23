@@ -1,0 +1,15 @@
+/** 
+ * 
+ */
+package io.sarl.simulation.multirotor.perceptions
+
+/** 
+ * Generic interface for Lidar Data
+ * @author Alexandre Lombard
+ * 
+ */
+interface ILidarData {
+	
+	def getPointCloud : float[]
+	
+}

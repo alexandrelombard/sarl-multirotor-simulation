@@ -1,0 +1,41 @@
+/** 
+ * 
+ */
+package io.sarl.simulation.multirotor.behaviors
+
+import io.sarl.core.DefaultContextInteractions
+import io.sarl.core.Logging
+import io.sarl.lang.core.Address
+import io.sarl.simulation.capacities.AgentBodyAffectationCapacity
+import io.sarl.simulation.events.PerceptionsPropagated
+import io.sarl.simulation.events.RetrievePerceptions
+
+/** 
+ * Perception retriever behavior
+ * @author Alexandre Lombard
+ * 
+ */
+abstract behavior AbstractMultirotorPerceptionRetriever {
+	uses Logging, DefaultContextInteractions
+
+	uses AgentBodyAffectationCapacity
+	
+	on RetrievePerceptions {
+		retrievePerceptions
+	}
+
+	/** Retrieve the perceptions for a single agent
+	 */
+	abstract def retrieveAgentPerceptions(address : Address, name : String)
+	
+	/** Retrieve the perceptions for all agents
+	 */
+	private def retrievePerceptions {
+		info("Retrieving perceptions for agents...")
+		
+		affectedBodies.forEach[address, name|retrieveAgentPerceptions(address, name)]
+		
+		emit(new PerceptionsPropagated)
+	}
+	
+}

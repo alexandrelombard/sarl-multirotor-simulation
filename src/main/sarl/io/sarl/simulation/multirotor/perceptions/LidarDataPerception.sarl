@@ -1,0 +1,17 @@
+/** 
+ * 
+ */
+package io.sarl.simulation.multirotor.perceptions
+
+/** 
+ * Event emitted by the simulation controller when lidar data is received
+ * @author Alexandre Lombard
+ * 
+ */
+event LidarDataPerception {
+	val lidarData: ILidarData
+	
+	new (lidarData: ILidarData) {
+		this.lidarData = lidarData
+	}
+}

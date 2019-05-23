@@ -1,0 +1,17 @@
+/** 
+ * 
+ */
+package io.sarl.simulation.multirotor.perceptions
+
+/** 
+ * Pose perception (note: this is a simulation only perception)
+ * @author Alexandre Lombard
+ * 
+ */
+event PosePerception {
+	val pose: IPose
+	
+	new(pose: IPose) {
+		this.pose = pose
+	}
+}
