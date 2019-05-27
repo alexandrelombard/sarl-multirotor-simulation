@@ -22,8 +22,13 @@
 		
 		<!-- Math library -->
 		<dependency>
+			<groupId>org.arakhne.afc.core</groupId>
+			<artifactId>math</artifactId>
+			<version>15.2</version>
+		</dependency>
+		<dependency>
 			<groupId>io.sarl.math</groupId>
-			<artifactId>sarl-math</artifactId>
+			<artifactId>sarl-math-geom</artifactId>
 			<version>1.0-SNAPSHOT</version>
 		</dependency>
 		

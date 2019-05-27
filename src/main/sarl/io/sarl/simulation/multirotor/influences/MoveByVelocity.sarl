@@ -3,7 +3,7 @@
  */
 package io.sarl.simulation.multirotor.influences
 
-import io.sarl.math.Vector3
+import org.arakhne.afc.math.geometry.d3.d.Vector3d
 
 /** 
  * Event emitted by an agent when it wants to move
@@ -11,10 +11,10 @@ import io.sarl.math.Vector3
  * 
  */
 event MoveByVelocity {
-	val vx: Float
-	val vy: Float
-	val vz: Float
-	val duration: Float
+	val vx : double
+	val vy : double
+	val vz : double
+	val duration : double
 	
 	/**
 	 * Builds a move by velocity command
@@ -23,7 +23,7 @@ event MoveByVelocity {
 	 * @param vz the linear velocity on the Z axis
 	 * @param duration the duration of the application of the velocity
 	 */
-	new(vx: Float, vy: Float, vz: Float, duration: Float) {
+	new(vx : double, vy : double, vz : double, duration : double) {
 		this.vx = vx
 		this.vy = vy
 		this.vz = vz
@@ -35,7 +35,7 @@ event MoveByVelocity {
 	 * @param v the velocity vector
 	 * @param duration the duration of the application of the velocity
 	 */
-	new(v: Vector3, duration: Float) {
+	new(v : Vector3d, duration : double) {
 		this(v.x, v.y, v.z, duration)
 	}
 }

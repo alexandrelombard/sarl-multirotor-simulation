@@ -3,13 +3,13 @@
  */
 package io.sarl.simulation.multirotor.perceptions
 
-import io.sarl.math.Vector3
+import org.arakhne.afc.math.geometry.d3.d.Vector3d
 
 /** 
  * @author Alexandre Lombard
  * 
  */
 interface IKinematicsState {
-	def getLinearVelocity : Vector3
-	def getLinearAcceleration : Vector3
+	def getLinearVelocity : Vector3d
+	def getLinearAcceleration : Vector3d
 }

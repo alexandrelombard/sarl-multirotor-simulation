@@ -3,7 +3,7 @@
  */
 package io.sarl.simulation.multirotor.perceptions
 
-import io.sarl.math.Vector3
+import org.arakhne.afc.math.geometry.d3.d.Vector3d
 import io.sarl.math.Quaternion
 
 /** 
@@ -11,7 +11,7 @@ import io.sarl.math.Quaternion
  * 
  */
 interface IPose {
-	def getPosition : Vector3
+	def getPosition : Vector3d
 	
 	def getOrientation : Quaternion
 }
